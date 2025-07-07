@@ -24,7 +24,7 @@ export function Footer() {
                             <h3 className="text-xl font-semibold mb-4 text-[#F4D03F]">Who we are</h3>
                             <ul className="space-y-3">
                                 <li>
-                                    <Link href="/who-we-are/about-us" className="text-white/80 hover:text-white transition-colors">
+                                    <Link href="/about-us" className="text-white/80 hover:text-white transition-colors">
                                         About Us
                                     </Link>
                                 </li>
