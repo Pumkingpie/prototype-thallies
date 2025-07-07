@@ -65,7 +65,7 @@ export default function WhoServe() {
                     transition={{ duration: 0.6, delay: 0.5 }}
                 >
                     <div className="text-center flex-1">
-                        <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">Soluciones para Personas</h3>
+                        <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">Solutions for Individuals</h3>
                         <p className="text-white/90 text-lg md:text-xl text-center">THALLIES offers community-wide fiber-optic internet and bundled telecommunication services, including Wi-Fi, TV services, home phone, security, and home automation. These services are available to residential communities, homeowner associations, master-planned communities, condo associations, and neighborhoods at half the cost tenants would pay to other providers for lower speeds.</p>
                     </div>
                     <div className="mt-8">
@@ -80,7 +80,7 @@ export default function WhoServe() {
                     transition={{ duration: 0.6, delay: 0.6 }}
                 >
                     <div className="text-center flex-1">
-                        <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">Soluciones para Empresas</h3>
+                        <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">Solutions for Businesses</h3>
                         <p className="text-white/90 text-lg md:text-xl text-center">THALLIES Enterprise offers scalable technology solutions, including managed Wi-Fi, business TV services, digital phone services, and security systems. These solutions are tailored to meet the needs of various industries and business sizes, including small-to-medium sized businesses, resorts and hotels, student housing, senior living facilities, venues and stadiums, and the public sector.</p>
                     </div>
                     <div className="mt-8">
