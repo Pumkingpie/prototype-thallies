@@ -93,47 +93,47 @@ export const ContactForm = () => {
 
     // Validaciones específicas por campo
     const validateName = (name: string): string | null => {
-        if (!name.trim()) return 'El nombre es requerido';
-        if (name.length > MAX_LENGTHS.name) return `El nombre no puede exceder ${MAX_LENGTHS.name} caracteres`;
-        if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/.test(name)) return 'El nombre solo puede contener letras y espacios';
-        if (name.length < 2) return 'El nombre debe tener al menos 2 caracteres';
+        if (!name.trim()) return 'Name is required';
+        if (name.length > MAX_LENGTHS.name) return `Name cannot exceed ${MAX_LENGTHS.name} characters`;
+        if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/.test(name)) return 'Name can only contain letters and spaces';
+        if (name.length < 2) return 'Name must be at least 2 characters long';
         return null;
     };
 
     const validateEmail = (email: string): string | null => {
-        if (!email.trim()) return 'El email es requerido';
-        if (email.length > MAX_LENGTHS.email) return `El email no puede exceder ${MAX_LENGTHS.email} caracteres`;
+        if (!email.trim()) return 'Email is required';
+        if (email.length > MAX_LENGTHS.email) return `Email cannot exceed ${MAX_LENGTHS.email} characters`;
         const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        if (!emailRegex.test(email)) return 'El formato del email no es válido';
+        if (!emailRegex.test(email)) return 'Email format is not valid';
         return null;
     };
 
     const validatePhone = (phone: string): string | null => {
-        if (!phone.trim()) return 'El teléfono es requerido';
-        if (phone.length > MAX_LENGTHS.phone) return `El teléfono no puede exceder ${MAX_LENGTHS.phone} caracteres`;
-        if (!/^[\+]?[0-9\s\-\(\)]+$/.test(phone)) return 'El teléfono solo puede contener números, espacios, guiones y paréntesis';
-        if (phone.replace(/\D/g, '').length < 10) return 'El teléfono debe tener al menos 10 dígitos';
+        if (!phone.trim()) return 'Phone number is required';
+        if (phone.length > MAX_LENGTHS.phone) return `Phone number cannot exceed ${MAX_LENGTHS.phone} characters`;
+        if (!/^[\+]?[0-9\s\-\(\)]+$/.test(phone)) return 'Phone number can only contain numbers, spaces, dashes and parentheses';
+        if (phone.replace(/\D/g, '').length < 10) return 'Phone number must have at least 10 digits';
         return null;
     };
 
     const validatePostalCode = (postal: string): string | null => {
-        if (!postal.trim()) return 'El código postal es requerido';
-        if (postal.length > MAX_LENGTHS.postal) return `El código postal no puede exceder ${MAX_LENGTHS.postal} caracteres`;
+        if (!postal.trim()) return 'Postal code is required';
+        if (postal.length > MAX_LENGTHS.postal) return `Postal code cannot exceed ${MAX_LENGTHS.postal} characters`;
         // Validación para códigos postales de US (puedes ajustar según el país)
-        if (!/^\d{5}(-\d{4})?$/.test(postal)) return 'El formato del código postal no es válido (ej: 12345 o 12345-6789)';
+        if (!/^\d{5}(-\d{4})?$/.test(postal)) return 'Postal code format is not valid (e.g., 12345 or 12345-6789)';
         return null;
     };
 
     const validateMessage = (message: string): string | null => {
-        if (!message.trim()) return 'El mensaje es requerido';
-        if (message.length > MAX_LENGTHS.message) return `El mensaje no puede exceder ${MAX_LENGTHS.message} caracteres`;
-        if (message.length < 10) return 'El mensaje debe tener al menos 10 caracteres';
+        if (!message.trim()) return 'Message is required';
+        if (message.length > MAX_LENGTHS.message) return `Message cannot exceed ${MAX_LENGTHS.message} characters`;
+        if (message.length < 10) return 'Message must be at least 10 characters long';
         return null;
     };
 
     const validateFieldLength = (field: keyof FormData, value: string): string | null => {
         if (value.length > MAX_LENGTHS[field]) {
-            return `Este campo no puede exceder ${MAX_LENGTHS[field]} caracteres`;
+            return `This field cannot exceed ${MAX_LENGTHS[field]} characters`;
         }
         return null;
     };
@@ -159,7 +159,7 @@ export const ContactForm = () => {
 
         // Validación de estado/región (obligatorio)
         if (!formData.state.trim()) {
-            newErrors.state = 'El estado/región es requerido';
+            newErrors.state = 'State/Region is required';
         } else {
             const stateError = validateFieldLength('state', formData.state);
             if (stateError) newErrors.state = stateError;
@@ -188,13 +188,13 @@ export const ContactForm = () => {
 
         // Validación de servicio
         if (!formData.service) {
-            newErrors.service = 'Por favor selecciona un servicio';
+            newErrors.service = 'Please select a service';
         }
 
         // Rate limiting
         if (submitCount >= MAX_SUBMITS_PER_HOUR) {
             const timeLeft = Math.ceil((SUBMIT_TIMEOUT - (Date.now() - lastSubmitTime)) / 60000);
-            newErrors.rateLimit = `Has alcanzado el límite de envíos. Intenta nuevamente en ${timeLeft} minutos.`;
+            newErrors.rateLimit = `You have reached the submission limit. Try again in ${timeLeft} minutes.`;
         }
 
         setErrors(newErrors);
@@ -244,7 +244,7 @@ export const ContactForm = () => {
                 message: ''
             });
         } catch {
-            setErrors({ submit: 'Error al enviar el formulario. Por favor, intenta nuevamente.' });
+            setErrors({ submit: 'Error sending the form. Please try again.' });
         } finally {
             setIsSubmitting(false);
         }
@@ -275,15 +275,15 @@ export const ContactForm = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-green-800 mb-2">¡Mensaje Enviado!</h3>
+                <h3 className="text-xl font-semibold text-green-800 mb-2">Message Sent!</h3>
                 <p className="text-green-700 mb-4">
-                    Gracias por contactarnos. Nos pondremos en contacto contigo pronto.
+                    Thank you for contacting us. We will get back to you soon.
                 </p>
                 <Button
                     onClick={() => setIsSubmitted(false)}
                     className="bg-green-600 hover:bg-green-700"
                 >
-                    Enviar Otro Mensaje
+                    Send Another Message
                 </Button>
             </motion.div>
         );
@@ -301,14 +301,14 @@ export const ContactForm = () => {
                 variants={animationConfig.itemVariants}
                 className="text-3xl font-bold text-navy mb-6"
             >
-                Envíanos un Mensaje
+                Send Us a Message
             </motion.h2>
 
             {/* Rate limiting warning */}
             {submitCount > 0 && (
                 <div className="mb-4 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
                     <p className="text-yellow-800 text-sm">
-                        Envíos restantes en esta hora: {MAX_SUBMITS_PER_HOUR - submitCount}
+                        Remaining submissions this hour: {MAX_SUBMITS_PER_HOUR - submitCount}
                     </p>
                 </div>
             )}
@@ -331,7 +331,7 @@ export const ContactForm = () => {
                 <motion.div variants={animationConfig.itemVariants} className="grid md:grid-cols-2 gap-4">
                     <div>
                         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                            Nombre Completo *
+                            Full Name *
                         </label>
                         <Input
                             id="name"
@@ -339,7 +339,7 @@ export const ContactForm = () => {
                             value={formData.name}
                             onChange={(e) => handleChange('name', e.target.value)}
                             error={!!errors.name}
-                            placeholder="Tu nombre completo"
+                            placeholder="Your full name"
                             maxLength={MAX_LENGTHS.name}
                         />
                         {errors.name && (
@@ -357,7 +357,7 @@ export const ContactForm = () => {
                             value={formData.email}
                             onChange={(e) => handleChange('email', e.target.value)}
                             error={!!errors.email}
-                            placeholder="tu@email.com"
+                            placeholder="your@email.com"
                             maxLength={MAX_LENGTHS.email}
                         />
                         {errors.email && (
@@ -369,7 +369,7 @@ export const ContactForm = () => {
                 <motion.div variants={animationConfig.itemVariants} className="grid md:grid-cols-2 gap-4">
                     <div>
                         <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                            Teléfono *
+                            Phone *
                         </label>
                         <Input
                             id="phone"
@@ -387,14 +387,14 @@ export const ContactForm = () => {
 
                     <div>
                         <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                            Empresa
+                            Company
                         </label>
                         <Input
                             id="company"
                             type="text"
                             value={formData.company}
                             onChange={(e) => handleChange('company', e.target.value)}
-                            placeholder="Nombre de tu empresa"
+                            placeholder="Your company name"
                             maxLength={MAX_LENGTHS.company}
                         />
                         {errors.company && (
@@ -406,14 +406,14 @@ export const ContactForm = () => {
                 <motion.div variants={animationConfig.itemVariants} className="grid md:grid-cols-2 gap-4">
                     <div>
                         <label htmlFor="street" className="block text-sm font-medium text-gray-700 mb-2">
-                            Dirección
+                            Address
                         </label>
                         <Input
                             id="street"
                             type="text"
                             value={formData.street}
                             onChange={(e) => handleChange('street', e.target.value)}
-                            placeholder="Calle y número"
+                            placeholder="Street and number"
                             maxLength={MAX_LENGTHS.street}
                         />
                         {errors.street && (
@@ -422,14 +422,14 @@ export const ContactForm = () => {
                     </div>
                     <div>
                         <label htmlFor="unit" className="block text-sm font-medium text-gray-700 mb-2">
-                            Unidad o Suite
+                            Unit or Suite
                         </label>
                         <Input
                             id="unit"
                             type="text"
                             value={formData.unit}
                             onChange={(e) => handleChange('unit', e.target.value)}
-                            placeholder="Unidad, suite, etc. (opcional)"
+                            placeholder="Unit, suite, etc. (optional)"
                             maxLength={MAX_LENGTHS.unit}
                         />
                         {errors.unit && (
@@ -440,14 +440,14 @@ export const ContactForm = () => {
                 <motion.div variants={animationConfig.itemVariants} className="grid md:grid-cols-3 gap-4">
                     <div>
                         <label htmlFor="city" className="block text-sm font-medium text-gray-700 mb-2">
-                            Ciudad
+                            City
                         </label>
                         <Input
                             id="city"
                             type="text"
                             value={formData.city}
                             onChange={(e) => handleChange('city', e.target.value)}
-                            placeholder="Ciudad"
+                            placeholder="City"
                             maxLength={MAX_LENGTHS.city}
                         />
                         {errors.city && (
@@ -456,7 +456,7 @@ export const ContactForm = () => {
                     </div>
                     <div>
                         <label htmlFor="state" className="block text-sm font-medium text-gray-700 mb-2">
-                            Estado/Región *
+                            State/Region *
                         </label>
                         <Input
                             id="state"
@@ -464,7 +464,7 @@ export const ContactForm = () => {
                             value={formData.state}
                             onChange={(e) => handleChange('state', e.target.value)}
                             error={!!errors.state}
-                            placeholder="Estado o región"
+                            placeholder="State or region"
                             maxLength={MAX_LENGTHS.state}
                         />
                         {errors.state && (
@@ -473,7 +473,7 @@ export const ContactForm = () => {
                     </div>
                     <div>
                         <label htmlFor="postal" className="block text-sm font-medium text-gray-700 mb-2">
-                            Código Postal *
+                            Postal Code *
                         </label>
                         <Input
                             id="postal"
@@ -481,7 +481,7 @@ export const ContactForm = () => {
                             value={formData.postal}
                             onChange={(e) => handleChange('postal', e.target.value)}
                             error={!!errors.postal}
-                            placeholder="Código postal"
+                            placeholder="Postal code"
                             maxLength={MAX_LENGTHS.postal}
                         />
                         {errors.postal && (
@@ -492,7 +492,7 @@ export const ContactForm = () => {
 
                 <motion.div variants={animationConfig.itemVariants}>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                        Servicio de Interés *
+                        Service of Interest *
                     </label>
                     <Select
                         id="service"
@@ -500,14 +500,14 @@ export const ContactForm = () => {
                         onChange={(e) => handleChange('service', e.target.value)}
                         error={!!errors.service}
                     >
-                        <option value="">Selecciona un servicio</option>
-                        <option value="internet-residential">Internet Residencial</option>
-                        <option value="internet-business">Internet Empresarial</option>
-                        <option value="tv-service">Servicio de TV</option>
-                        <option value="voice-service">Servicio de Voz</option>
-                        <option value="security-service">Servicio de Seguridad</option>
-                        <option value="consulting">Consultoría</option>
-                        <option value="other">Otro</option>
+                        <option value="">Select a service</option>
+                        <option value="internet-residential">Residential Internet</option>
+                        <option value="internet-business">Business Internet</option>
+                        <option value="tv-service">TV Service</option>
+                        <option value="voice-service">Voice Service</option>
+                        <option value="security-service">Security Service</option>
+                        <option value="consulting">Consulting</option>
+                        <option value="other">Other</option>
                     </Select>
                     {errors.service && (
                         <p className="text-red-500 text-sm mt-1">{errors.service}</p>
@@ -516,14 +516,14 @@ export const ContactForm = () => {
 
                 <motion.div variants={animationConfig.itemVariants}>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                        Mensaje *
+                        Message *
                     </label>
                     <Textarea
                         id="message"
                         value={formData.message}
                         onChange={(e) => handleChange('message', e.target.value)}
                         error={!!errors.message}
-                        placeholder="Cuéntanos sobre tu proyecto o consulta..."
+                        placeholder="Tell us about your project or inquiry..."
                         rows={5}
                         maxLength={MAX_LENGTHS.message}
                     />
@@ -541,10 +541,10 @@ export const ContactForm = () => {
                         {isSubmitting ? (
                             <div className="flex items-center gap-2">
                                 <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                                Enviando...
+                                Sending...
                             </div>
                         ) : (
-                            'Enviar Mensaje'
+                            'Send Message'
                         )}
                     </Button>
                 </motion.div>

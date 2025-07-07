@@ -12,9 +12,9 @@ export const ContactMap = () => {
             className="mt-20"
         >
             <motion.div variants={animationConfig.itemVariants} className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-navy mb-4">Nuestra Ubicación</h2>
+                <h2 className="text-3xl font-bold text-navy mb-4">Our Location</h2>
                 <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                    Visítanos en nuestra oficina principal en San Francisco, o contáctanos para programar una reunión virtual.
+                    Visit us at our main office in San Francisco, or contact us to schedule a virtual meeting.
                 </p>
             </motion.div>
 
@@ -35,9 +35,9 @@ export const ContactMap = () => {
                                     <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-semibold text-navy mb-2">Mapa Interactivo</h3>
+                            <h3 className="text-xl font-semibold text-navy mb-2">Interactive Map</h3>
                             <p className="text-gray-600 mb-4">
-                                Aquí se integraría Google Maps o Mapbox
+                                Google Maps or Mapbox would be integrated here
                             </p>
                             <a
                                 href="https://maps.google.com"
@@ -48,7 +48,7 @@ export const ContactMap = () => {
                                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                                     <path fillRule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clipRule="evenodd" />
                                 </svg>
-                                Abrir en Google Maps
+                                Open in Google Maps
                             </a>
                         </div>
                     </div>
@@ -60,55 +60,55 @@ export const ContactMap = () => {
                     className="space-y-6"
                 >
                     <div className="bg-blue-50 hover:bg-indigo-100 transition-colors rounded-lg shadow-lg p-6">
-                        <h3 className="text-xl font-semibold text-navy mb-4">Oficina Principal</h3>
+                        <h3 className="text-xl font-semibold text-navy mb-4">Main Office</h3>
                         <div className="space-y-4">
                             <div>
-                                <h4 className="font-medium text-gray-900 mb-1">Dirección</h4>
+                                <h4 className="font-medium text-gray-900 mb-1">Address</h4>
                                 <p className="text-gray-600">
                                     123 Tech Street, Suite 100<br />
                                     San Francisco, CA 94105<br />
-                                    Estados Unidos
+                                    United States
                                 </p>
                             </div>
 
                             <div>
-                                <h4 className="font-medium text-gray-900 mb-1">Horarios</h4>
+                                <h4 className="font-medium text-gray-900 mb-1">Hours</h4>
                                 <div className="text-gray-600 space-y-1">
                                     <div className="flex justify-between">
-                                        <span>Lunes - Viernes:</span>
+                                        <span>Monday - Friday:</span>
                                         <span>8:00 AM - 6:00 PM</span>
                                     </div>
                                     <div className="flex justify-between">
-                                        <span>Sábados:</span>
+                                        <span>Saturday:</span>
                                         <span>9:00 AM - 2:00 PM</span>
                                     </div>
                                     <div className="flex justify-between">
-                                        <span>Domingos:</span>
-                                        <span>Cerrado</span>
+                                        <span>Sunday:</span>
+                                        <span>Closed</span>
                                     </div>
                                 </div>
                             </div>
 
                             <div>
-                                <h4 className="font-medium text-gray-900 mb-1">Estacionamiento</h4>
+                                <h4 className="font-medium text-gray-900 mb-1">Parking</h4>
                                 <p className="text-gray-600">
-                                    Estacionamiento gratuito disponible en el edificio
+                                    Free parking available in the building
                                 </p>
                             </div>
                         </div>
                     </div>
 
                     <div className="bg-gradient-to-r from-[#001427] to-indigo-900 text-white rounded-lg p-6">
-                        <h3 className="text-xl font-semibold mb-4">Cómo Llegar</h3>
+                        <h3 className="text-xl font-semibold mb-4">How to Get Here</h3>
                         <div className="space-y-3">
                             <div className="flex items-start gap-3">
                                 <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                                     <span className="text-sm font-bold">1</span>
                                 </div>
                                 <div>
-                                    <h4 className="font-medium">En Transporte Público</h4>
+                                    <h4 className="font-medium">Public Transportation</h4>
                                     <p className="text-sm text-gray-100">
-                                        Línea BART hasta Powell Street Station
+                                        BART line to Powell Street Station
                                     </p>
                                 </div>
                             </div>
@@ -118,9 +118,9 @@ export const ContactMap = () => {
                                     <span className="text-sm font-bold">2</span>
                                 </div>
                                 <div>
-                                    <h4 className="font-medium">En Auto</h4>
+                                    <h4 className="font-medium">By Car</h4>
                                     <p className="text-sm text-gray-100">
-                                        Salida 101 hacia Market Street
+                                        Exit 101 towards Market Street
                                     </p>
                                 </div>
                             </div>
@@ -130,9 +130,9 @@ export const ContactMap = () => {
                                     <span className="text-sm font-bold">3</span>
                                 </div>
                                 <div>
-                                    <h4 className="font-medium">A Pie</h4>
+                                    <h4 className="font-medium">Walking</h4>
                                     <p className="text-sm text-gray-100">
-                                        5 minutos desde Union Square
+                                        5 minutes from Union Square
                                     </p>
                                 </div>
                             </div>
@@ -140,9 +140,9 @@ export const ContactMap = () => {
                     </div>
 
                     <div className="bg-white border border-[#BF0603] rounded-lg shadow-lg p-6">
-                        <h3 className="text-xl font-semibold text-navy mb-4">Reuniones Virtuales</h3>
+                        <h3 className="text-xl font-semibold text-navy mb-4">Virtual Meetings</h3>
                         <p className="text-gray-600 mb-4">
-                            ¿Prefieres una reunión virtual? Estamos disponibles en:
+                            Prefer a virtual meeting? We are available on:
                         </p>
                         <div className="space-y-3">
                             <div className="flex items-center gap-3">

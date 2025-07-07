@@ -10,10 +10,10 @@ const contactInfo = [
                 <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
             </svg>
         ),
-        title: 'Oficina Principal',
+        title: 'Main Office',
         content: '123 Tech Street, Suite 100<br />San Francisco, CA 94105',
         link: 'https://maps.google.com',
-        linkText: 'Ver en Google Maps'
+        linkText: 'View on Google Maps'
     },
     {
         icon: (
@@ -25,7 +25,7 @@ const contactInfo = [
         title: 'Email',
         content: 'contact@thallies.com<br />support@thallies.com',
         link: 'mailto:contact@thallies.com',
-        linkText: 'Enviar Email'
+        linkText: 'Send Email'
     },
     {
         icon: (
@@ -33,10 +33,10 @@ const contactInfo = [
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
             </svg>
         ),
-        title: 'Teléfono',
+        title: 'Phone',
         content: '+1 (555) 123-4567<br />+1 (555) 987-6543',
         link: 'tel:+15551234567',
-        linkText: 'Llamar Ahora'
+        linkText: 'Call Now'
     },
     {
         icon: (
@@ -44,8 +44,8 @@ const contactInfo = [
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
             </svg>
         ),
-        title: 'Horarios de Atención',
-        content: 'Lunes - Viernes: 8:00 AM - 6:00 PM<br />Sábados: 9:00 AM - 2:00 PM',
+        title: 'Business Hours',
+        content: 'Monday - Friday: 8:00 AM - 6:00 PM<br />Saturday: 9:00 AM - 2:00 PM',
         link: null,
         linkText: null
     }
@@ -91,10 +91,10 @@ export const ContactInfo = () => {
         >
             <motion.div variants={animationConfig.itemVariants}>
                 <h2 className="text-3xl font-bold text-navy mb-6">
-                    Información de Contacto
+                    Contact Information
                 </h2>
                 <p className="text-gray-600 text-lg">
-                    Estamos aquí para ayudarte. Contáctanos a través de cualquiera de estos medios.
+                    We are here to help you. Contact us through any of these channels.
                 </p>
             </motion.div>
 
@@ -130,7 +130,7 @@ export const ContactInfo = () => {
             </motion.div>
 
             <motion.div variants={animationConfig.itemVariants} className="pt-6 border-t border-gray-200">
-                <h3 className="text-xl font-semibold text-navy mb-4">Síguenos</h3>
+                <h3 className="text-xl font-semibold text-navy mb-4">Follow Us</h3>
                 <div className="flex space-x-4">
                     {socialLinks.map((social, index) => (
                         <motion.a
@@ -150,22 +150,22 @@ export const ContactInfo = () => {
             </motion.div>
 
             <motion.div variants={animationConfig.itemVariants} className="bg-gradient-to-r from-[#001427] to-indigo-900 text-white p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-3">¿Necesitas Soporte Técnico?</h3>
+                <h3 className="text-xl font-semibold mb-3">Need Technical Support?</h3>
                 <p className="mb-4 text-gray-100">
-                    Nuestro equipo técnico está disponible 24/7 para ayudarte con cualquier problema.
+                    Our technical support team is available 24/7 to help you with any issues.
                 </p>
                 <div className="space-y-2 text-sm">
                     <div className="flex items-center gap-2">
                         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
                         </svg>
-                        <span>Soporte 24/7</span>
+                        <span>24/7 Support</span>
                     </div>
                     <div className="flex items-center gap-2">
                         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
-                        <span>Respuesta en menos de 2 horas</span>
+                        <span>Response in less than 2 hours</span>
                     </div>
                 </div>
             </motion.div>
