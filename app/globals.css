@@ -11,6 +11,10 @@
   clip-path: polygon(0 100%, 100% 100%, 50% 0);
 }
 
+html {
+  font-size: 18px;
+}
+
 @layer base {
   body {
     @apply bg-white text-[#001427];
