@@ -44,7 +44,7 @@ html {
   /* Desktop grande (xl) */
   @media (min-width: 1280px) {
     .container {
-      @apply px-8 max-w-[1400px] mx-auto;
+      @apply px-8 max-w-[1100px] mx-auto;
     }
   }
 
