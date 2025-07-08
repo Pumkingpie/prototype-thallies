@@ -7,7 +7,7 @@ export default function Hero() {
             <div className="container mx-auto px-4">
                 <div className="text-center max-w-4xl mx-auto">
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                        Become part of the <span className="block text-[#F4D58D]">Hotwire Team!</span>
+                        Become part of the <span className="block text-[#F4D58D]">THALLIES Team!</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto">
                         Bring your talent, dedication, and passion for technology, and we’ll give you the opportunity to power the future. At Hotwire Communications, we thrive on creativity, innovation, and collaboration—helping you grow while making a real impact in our communities.
