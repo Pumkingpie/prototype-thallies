@@ -10,7 +10,7 @@ export default function Hero() {
                         Become part of the <span className="block text-[#F4D58D]">THALLIES Team!</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto">
-                        Bring your talent, dedication, and passion for technology, and we’ll give you the opportunity to power the future. At Hotwire Communications, we thrive on creativity, innovation, and collaboration—helping you grow while making a real impact in our communities.
+                        Bring your talent, dedication, and passion for technology, and we’ll give you the opportunity to power the future. At Thallies Communications, we thrive on creativity, innovation, and collaboration—helping you grow while making a real impact in our communities.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                         <OptimizedLink href='#Section' variant='button' size="lg" className="bg-[#F4D58D] hover:bg-[#F4D58D]/90 text-[#001427] px-8 py-3 text-lg font-semibold">
