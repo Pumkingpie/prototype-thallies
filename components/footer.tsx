@@ -149,7 +149,7 @@ export function Footer() {
                 <div className="border-t border-white/20 mt-12 pt-8">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-sm text-gray-400">
-                            © 2024 THALLIES. All rights reserved.
+                            © 2025 THALLIES. All rights reserved.
                         </p>
                         <div className="flex gap-6">
                             <Link href="/privacy" className="text-white/60 hover:text-white text-sm transition-colors">
